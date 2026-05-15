@@ -1,56 +1,125 @@
 body {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 4fr;
+    background-color: rgb(255, 255, 255);
 }
 
-ul {
-    list-style-type: none;
-}
 
-header {
-    background-color: #000000;
-    color: #FFFFFF;
-}
-
-.header-container {
-    display: flex;
+/*1) Estilização do Cabeçalho*/
+#header_container {
+    display: grid;
+    border: 1px solid black;
+    height: auto;
+    width: auto;
+    padding: 10px 20px;
+    background-color: rgb(0, 0, 0);
     align-items: center;
-    justify-content: center;
-    padding: 20px;
-    gap: 30px;
+    grid-template-columns: 100px 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 15px;
+    color: white;
 }
 
-.header-info {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#logo {
+    width: 100px;
+    height: 100px;
+    grid-column: 1;
+    grid-row: 1 / 3;
+    justify-self: center;
+    margin: 0;
 }
 
-.header-info nav ul {
+#titulo_page {
+    grid-column: 2;
+    grid-row: 1;
+    margin: 0;
+    align-self: end;
+}
+
+#descr_page {
+    grid-column: 2;
+    grid-row: 2;
+    margin: 0;
+    align-self: start;
+}
+
+#nav_cabecalho {
+    grid-column: 3;
+    grid-row: 1 / 3;
+    justify-self: end;
+}
+
+#nav_cabecalho ul {
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    list-style: none;
     padding: 0;
-    margin-top: 15px;
+    margin: 0;
 }
 
-.header-info nav a {
-    color: #FFFFFF;
+#nav_cabecalho a {
+    color: white;
     text-decoration: none;
 }
 
-.header-info nav a:hover {
+#nav_cabecalho a:hover {
+    color: green;
     text-decoration: underline;
 }
 
-.logo {
-    width: 150px;
-    height: 150px;
-    border-radius: 10px;
-    float: left;
+/* Final da Estilização do Cabeçalho */
+
+
+
+
+
+/* Estilização do Main */
+#main_container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 20px;
+    border: 1px solid black;
+    height: 100%;
+    width: auto;
+    padding: 20px;
+    background-color: rgb(229, 235, 231);
 }
 
-footer {
-    background-color: rgb(185, 185, 185);
-    flex: 2;
+#minhas_fotos {
+    grid-column: 1;
+    border: 1px solid black;
+    width: 300px;
+    height: 300px;
+}
+
+#foto_carregada {
+    width: 300px;
+    height: 300px;
+
+}
+
+#sobre_mim {
+    grid-column: 2;
+    margin: 0;
+    padding: 10px;
+}
+
+/* Final da Estilização do Main */
+
+
+
+
+
+/*Estilização do Rodapé*/
+#footer_container {
+    border: 1px solid black;
+    height: auto;
+    width: auto;
+    padding: 10px;
+    background-color: rgb(0, 0, 0);
+    color: white;
     text-align: center;
 }
+
+/* Final da Estilização do Rodapé */
